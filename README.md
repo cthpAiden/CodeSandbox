@@ -1,38 +1,46 @@
 # CodeSandbox — Java Practice & Progress Tracker
 
-Repo cá nhân lưu các bài tập / project luyện code Java của Aiden. Dùng để đồng bộ
-giữa nhiều máy và theo dõi tiến độ (bài nào xong, bài nào còn dở).
+Personal repo storing Aiden's Java practice exercises and projects. Used to sync
+work across multiple devices and to track progress (which exercises are done,
+which are still in progress).
 
-## Hướng dẫn cho Claude (đọc kỹ mỗi khi được yêu cầu đọc repo này)
+## Instructions for Claude (read carefully whenever asked to read this repo)
 
-Khi user dán link repo này và bảo "nắm context của codebase / project đang làm",
-Claude cần tự hiểu các điều sau mà KHÔNG cần user giải thích lại:
+When the user pastes this repo's link and asks Claude to "grasp the context of
+the codebase / project I'm working on", Claude should already understand the
+following WITHOUT the user having to explain again:
 
-1. **Mục đích repo**: nơi lưu toàn bộ bài tập và tiến độ luyện code của user.
-   User làm việc trên 2 máy khác nhau, nên repo là nguồn đồng bộ chính. User
-   cũng lưu bản local nhưng ít khi xem, nên GitHub là nơi review chính thức.
+1. **Purpose of the repo**: a place to store all of the user's practice exercises
+   and coding progress. The user works on 2 different devices, so this repo is the
+   main sync source. The user also keeps local copies but rarely reviews them, so
+   GitHub is the primary place for reviewing and continuing work.
 
-2. **Khi user nói "pull / kéo content về folder của tui"**: nghĩa là lấy code
-   từ repo này về folder làm việc local mà user đang mở trong session, để user
-   tiếp tục code. Hỏi user folder đích nếu chưa rõ.
+2. **When the user says "pull / bring the content to my folder"**: it means copy
+   code from this repo into the local working folder the user currently has open
+   in the session, so they can keep coding. Ask the user for the destination
+   folder if it is not clear.
 
-3. **Đây là tracker tiến độ**: nhiều project chưa hoàn thành. Khi đọc, Claude
-   nên xác định project nào còn dở (method trống, case switch chưa điền...) để
-   user biết chỗ cần làm tiếp.
+3. **This is a progress tracker**: many projects are unfinished. When reading,
+   Claude should identify which projects are still in progress (empty methods,
+   unfilled switch cases, etc.) so the user knows what is left to do.
 
-4. **Cấu trúc thư mục bắt buộc**:
+4. **Required folder structure**:
    ```
-   <TenProject>/
-       <package1>/   (vd: Manager/, data/)
+   <ProjectName>/
+       <package1>/   (e.g. Manager/, data/)
            *.java
        <package2>/
            *.java
    ```
-   Mỗi exercise là 1 folder riêng ở root, tên = tên project. Bên trong giữ
-   nguyên cấu trúc package Java (mỗi package = 1 folder, chứa các file .java).
+   Each exercise is its own folder at the repo root, named after the project.
+   Inside, keep the standard Java package structure (one folder per package,
+   each containing the .java files).
 
-## Các project
+Note: README and repo docs are written in English. Code (comments, prompts,
+identifiers) may be in Vietnamese.
 
-| Project | Mô tả | Trạng thái |
+## Projects
+
+| Project | Description | Status |
 |---|---|---|
-| QuanLyNhanVien | OOP: kế thừa, polymorphism, instanceof, ArrayList, sort, search | Đang làm dở (menu case 2-8 chưa điền) |
+| QuanLyNhanVien | OOP: inheritance, polymorphism, instanceof, ArrayList, sort, search | In progress (menu cases 2-8 not yet implemented) |
