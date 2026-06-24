@@ -22,22 +22,22 @@ public class QuanLy {
                     ql.nhapNhanVien();
                     break;
                 case 2:
-
+                    ql.displayAll();
                     break;
                 case 3:
-
+                    ql.xuatFullTime();
                     break;
                 case 4:
-
+                    ql.tongLuong();
                     break;
                 case 5:
-
+                    ql.timTheoTen();
                     break;
                 case 6:
-
+                    ql.luongCaoNhat();
                     break;
                 case 7:
-
+                    ql.sortLuongGiamDan();
                     break;
                 case 8:
 
@@ -77,5 +77,72 @@ public class QuanLy {
         nv.nhapInfo();
         staff.add(nv);
         System.out.println("Add thanh cong!");
+    }
+
+    public void displayAll() {
+        if (staff.isEmpty()) {
+            System.out.println("No records.");
+            return;
+        }
+        for (NhanVien nhanVien : staff) {
+            nhanVien.xuatInfo();
+        }
+    }
+
+    public void xuatFullTime() {
+        boolean found = false;
+        for (NhanVien nhanVien : staff) {
+            if (nhanVien instanceof FullTime) {
+                nhanVien.xuatInfo();
+                found = true;
+            }
+        }
+        if (found == true) {
+            System.out.println("No full-time employee");
+        }
+    }
+
+    public void tongLuong() {
+        double total = 0;
+        for (NhanVien nhanVien : staff) {
+            total += nhanVien.tinhLuong();
+        }
+        System.out.printf("Total salary: %.3f", total);
+    }
+
+    public void timTheoTen() {
+        System.out.print("Enter name to search: ");
+        String name = NhanVien.sc.nextLine();
+        boolean found = false;
+        for (NhanVien nhanVien : staff) {
+            if (nhanVien.getTen().equalsIgnoreCase(name)) {
+                nhanVien.xuatInfo();
+                found = true;
+            }
+        }
+        if (found != true) {
+            System.out.println("Not found.");
+        }
+    }
+
+    public void luongCaoNhat() {
+        if (staff.isEmpty()) {
+            System.out.println("No employee(s).");
+            return;
+        }
+        NhanVien maxNV = staff.get(0);
+        for (int i = 0; i < staff.size(); i++) {
+            if (staff.get(i).tinhLuong() > maxNV.tinhLuong()) {
+                maxNV = staff.get(i);
+            }
+        }
+        System.out.println("Highest paid: ");
+        maxNV.xuatInfo();
+    }
+
+    public void sortLuongGiamDan() {
+        staff.sort((a, b) -> Double.compare(b.tinhLuong(), a.tinhLuong()));
+        System.out.println("Sorted (high to low");
+        displayAll();
     }
 }
