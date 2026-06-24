@@ -40,10 +40,7 @@ public class QuanLy {
                     ql.sortLuongGiamDan();
                     break;
                 case 8:
-
-                    break;
-                case 9:
-
+                    ql.xoaTheoIndex();
                     break;
                 default:
                     System.out.println("Invalid choice!");
@@ -97,7 +94,7 @@ public class QuanLy {
                 found = true;
             }
         }
-        if (found == true) {
+        if (found == false) {
             System.out.println("No full-time employee");
         }
     }
@@ -107,7 +104,7 @@ public class QuanLy {
         for (NhanVien nhanVien : staff) {
             total += nhanVien.tinhLuong();
         }
-        System.out.printf("Total salary: %.3f", total);
+        System.out.printf("Total salary: %.3f\n", total);
     }
 
     public void timTheoTen() {
@@ -141,8 +138,9 @@ public class QuanLy {
     }
 
     public void sortLuongGiamDan() {
-        staff.sort((a, b) -> Double.compare(b.tinhLuong(), a.tinhLuong()));
-        System.out.println("Sorted (high to low");
+        staff.sort((a,b) -> Double.compare(b.tinhLuong(),a.tinhLuong()));
+        System.out.println("Descending order: ");
         displayAll();
     }
-}
+    
+    public 

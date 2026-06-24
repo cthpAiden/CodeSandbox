@@ -34,10 +34,7 @@ public class FullTime extends NhanVien {
             }
         }
     }
-
+    
     @Override
-    public double tinhLuong() {
-        return luongCoBan + thuong;
-    }
-
-}
+    public void xuatInfo() {
+        System.out.printf("|%-10s|%-10d|%-10
