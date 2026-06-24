@@ -57,6 +57,13 @@ following WITHOUT the user having to explain again:
    `project.properties`, and place sources under `src/<package>/`. The result
    must open in NetBeans as a project (coffee-cup icon), not a plain folder.
 
+6. **Always update this README on every push**: whenever Claude commits and
+   pushes changes, it must also update the Projects table below (and any relevant
+   notes) in the same push, so the user can track progress from GitHub. Reflect
+   what changed: mark projects done, note which menu cases or methods are still
+   unfinished, and add a row for any new project. Never push code changes without
+   refreshing this README.
+
 Note: README and repo docs are written in English. Code (comments, prompts,
 identifiers) may be in Vietnamese.
 
@@ -64,6 +71,6 @@ identifiers) may be in Vietnamese.
 
 | Project | Description | Status |
 |---|---|---|
-| QuanLyNhanVien | OOP: inheritance, polymorphism, instanceof, ArrayList, sort, search | In progress (menu cases 2-8 not yet implemented) |
-| BankManagement | OOP: TaiKhoan parent + TietKiem/ThanhToan children, bank menu | In progress |
-| VehicleRental | OOP: Vehicle parent + Car/Motorbike children, rental shop menu | In progress (skeleton with TODO holes to fill) |
+| QuanLyNhanVien | OOP: inheritance, polymorphism, instanceof, ArrayList, sort, search | Done (all 8 menu cases implemented, input validation, clean exit) |
+| BankManagement | OOP: TaiKhoan parent + TietKiem/ThanhToan children, bank menu | Done (all menu cases, input prompts + validation, monthly-interest aggregate) |
+| VehicleRental | OOP: Vehicle parent + Car/Motorbike children, rental shop menu | In progress (Vehicle base + input helpers done; Car/Motorbike fee logic and RentalShop menu still to do; main.class points to obsolete vehiclerental.VehicleRentalMain) |
