@@ -17,7 +17,12 @@ public class QuanLyNganHang {
         do {
             ql.menu();
             System.out.print("Choice: ");
-            choice = Integer.parseInt(sc.nextLine());
+            try {
+                choice = Integer.parseInt(sc.nextLine().trim());
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid choice! Enter a number.");
+                continue;
+            }
             switch (choice) {
                 case 1:
                     ql.themTK();

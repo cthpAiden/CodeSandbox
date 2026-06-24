@@ -12,11 +12,16 @@ public class QuanLy {
 
     public static void main(String[] args) {
         QuanLy ql = new QuanLy();
-        int choice;
+        int choice = -1;
         do {
             menu();
             System.out.print("Choice: ");
-            choice = Integer.parseInt(NhanVien.sc.nextLine());
+            try {
+                choice = Integer.parseInt(NhanVien.sc.nextLine().trim());
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid choice! Enter a number.");
+                continue;
+            }
             switch (choice) {
                 case 1:
                     ql.nhapNhanVien();
@@ -41,6 +46,9 @@ public class QuanLy {
                     break;
                 case 8:
                     ql.xoaTheoIndex();
+                    break;
+                case 0:
+                    System.out.println("Bye!");
                     break;
                 default:
                     System.out.println("Invalid choice!");

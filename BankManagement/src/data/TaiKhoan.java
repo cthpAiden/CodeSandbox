@@ -51,11 +51,10 @@ public class TaiKhoan {
     }
 
     public void nhapInfo() {
-        System.out.printf("");
+        System.out.print("Nhap chu tai khoan: ");
         chuTaiKhoan = sc.nextLine();
-        System.out.printf("");
+        System.out.print("Nhap so tai khoan: ");
         soTaiKhoan = sc.nextLine();
-        System.out.printf("");
         while (true) {
             System.out.print("Nhap soDu:");
             try {
