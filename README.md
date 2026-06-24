@@ -24,17 +24,27 @@ following WITHOUT the user having to explain again:
    Claude should identify which projects are still in progress (empty methods,
    unfilled switch cases, etc.) so the user knows what is left to do.
 
-4. **Required folder structure**:
+4. **Required folder structure** (NetBeans Ant Java SE project):
    ```
    <ProjectName>/
-       <package1>/   (e.g. Manager/, data/)
-           *.java
-       <package2>/
-           *.java
+       build.xml
+       manifest.mf
+       nbproject/
+           project.xml
+           project.properties
+           genfiles.properties
+       src/
+           <package1>/   (e.g. Manager/, data/)
+               *.java
+           <package2>/
+               *.java
    ```
    Each exercise is its own folder at the repo root, named after the project.
-   Inside, keep the standard Java package structure (one folder per package,
-   each containing the .java files).
+   Source files live under `src/` in the standard Java package layout (one
+   folder per package). The `nbproject/` metadata and `build.xml` make NetBeans
+   open the folder as a real Java project (coffee-cup icon) rather than a plain
+   folder. NetBeans auto-generates `nbproject/build-impl.xml` on first open; the
+   `build/`, `dist/`, and `nbproject/private/` folders are git-ignored.
 
 Note: README and repo docs are written in English. Code (comments, prompts,
 identifiers) may be in Vietnamese.
