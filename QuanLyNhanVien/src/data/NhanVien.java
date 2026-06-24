@@ -66,9 +66,10 @@ public class NhanVien {
     }
 
     public void xuatInfo() {
-        System.out.printf("|%-10s|%-10d|%-10.3f|]n", ten, tuoi, luongCoBan);
+        System.out.printf("|%-10s|%-10d|%-10.3f|\n", ten, tuoi, luongCoBan);
     }
 
     public double tinhLuong() {
         return luongCoBan;
     }
+}

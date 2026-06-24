@@ -37,4 +37,11 @@ public class FullTime extends NhanVien {
     
     @Override
     public void xuatInfo() {
-        System.out.printf("|%-10s|%-10d|%-10
+        System.out.printf("|%-10s|%-10d|%-10.3f|%-10.3f|%-10.3f|\n", ten, tuoi, luongCoBan, thuong, tinhLuong());
+    }
+
+    @Override
+    public double tinhLuong() {
+        return luongCoBan + thuong;
+    }
+}

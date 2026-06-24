@@ -143,4 +143,22 @@ public class QuanLy {
         displayAll();
     }
     
-    public 
+    public void xoaTheoIndex() {
+        if (staff.isEmpty()) {
+            System.out.println("No records.");
+            return;
+        }
+        System.out.print("Enter index to delete (0 to " + (staff.size() - 1) + "): ");
+        try {
+            int index = Integer.parseInt(NhanVien.sc.nextLine());
+            if (index < 0 || index >= staff.size()) {
+                System.out.println("Invalid index!");
+                return;
+            }
+            staff.remove(index);
+            System.out.println("Deleted successfully!");
+        } catch (Exception e) {
+            System.out.println("Invalid input!");
+        }
+    }
+}
