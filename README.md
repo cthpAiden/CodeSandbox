@@ -46,6 +46,17 @@ following WITHOUT the user having to explain again:
    folder. NetBeans auto-generates `nbproject/build-impl.xml` on first open; the
    `build/`, `dist/`, and `nbproject/private/` folders are git-ignored.
 
+5. **Always create a real Ant Java project, never a plain folder**: whenever the
+   user asks to add a new exercise or "make a project", Claude must scaffold a
+   full NetBeans Ant Java SE project (with `build.xml`, `manifest.mf`, and the
+   `nbproject/` metadata shown above), not just a folder with a `.java` file in
+   it. The fastest reliable way is to copy the `build.xml`, `manifest.mf`, and
+   `nbproject/` files from an existing project, rename every occurrence of the
+   old project name (in `build.xml`, `nbproject/build-impl.xml`,
+   `nbproject/project.xml`, `nbproject/project.properties`), set `main.class` in
+   `project.properties`, and place sources under `src/<package>/`. The result
+   must open in NetBeans as a project (coffee-cup icon), not a plain folder.
+
 Note: README and repo docs are written in English. Code (comments, prompts,
 identifiers) may be in Vietnamese.
 
@@ -54,3 +65,5 @@ identifiers) may be in Vietnamese.
 | Project | Description | Status |
 |---|---|---|
 | QuanLyNhanVien | OOP: inheritance, polymorphism, instanceof, ArrayList, sort, search | In progress (menu cases 2-8 not yet implemented) |
+| BankManagement | OOP: TaiKhoan parent + TietKiem/ThanhToan children, bank menu | In progress |
+| VehicleRental | OOP: Vehicle parent + Car/Motorbike children, rental shop menu | In progress (skeleton with TODO holes to fill) |
