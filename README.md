@@ -73,4 +73,4 @@ identifiers) may be in Vietnamese.
 |---|---|---|
 | QuanLyNhanVien | OOP: inheritance, polymorphism, instanceof, ArrayList, sort, search | Done (all 8 menu cases implemented, input validation, clean exit) |
 | BankManagement | OOP: TaiKhoan parent + TietKiem/ThanhToan children, bank menu | Done (all menu cases, input prompts + validation, monthly-interest aggregate) |
-| VehicleRental | OOP: Vehicle parent + Car/Motorbike children, rental shop menu | In progress (Vehicle base + input helpers done; Car/Motorbike fee logic and RentalShop menu still to do; main.class points to obsolete vehiclerental.VehicleRentalMain) |
+| VehicleRental | OOP: Vehicle parent + Car/Motorbike children, rental shop menu | Done (Vehicle abstract with abstract calculateRentalFee/getType; Car adds numSeats + 20% surcharge for >4 seats; Motorbike adds engineCC + 15% surcharge for >150cc; Manager menu: add car/motorbike, display all, search/remove by ID, total fee, sort by fee) |
