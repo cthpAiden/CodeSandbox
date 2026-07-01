@@ -8,9 +8,6 @@ public class Comic extends Book {
     public Comic() {
     }
 
-    public Comic(int issueNumber) {
-        this.issueNumber = issueNumber;
-    }
 
     public Comic(String bookID, String bookName, String author, String publicationYear, int quantity, int issueNumber) {
         super(bookID, bookName, author, publicationYear, quantity);

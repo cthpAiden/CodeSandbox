@@ -260,16 +260,16 @@ Every entity prints as a table with a **separator line** + a **format string**. 
 
 > Outcome: a simple standalone entity. No inheritance — pure encapsulation. Fast module.
 
-- [ ] **Step 3.1 — File + class shell** (`src/schema/Member.java`, `package schema;`).
-- [ ] **Step 3.2 — 4 private fields:** a) `memberID` b) `nameMember` c) `email` d) `phoneNumber` (all String).
-- [ ] **Step 3.3 — No-arg constructor.**
-- [ ] **Step 3.4 — Full constructor** (4 params, `this.x = x`).
+- [x] **Step 3.1 — File + class shell** (`src/schema/Member.java`, `package schema;`).
+- [x] **Step 3.2 — 4 private fields:** a) `memberID` b) `nameMember` c) `email` d) `phoneNumber` (all String).
+- [x] **Step 3.3 — No-arg constructor.**
+- [x] **Step 3.4 — Full constructor** (4 params, `this.x = x`).
 - [ ] **Step 3.5 — Getters** (all 4).
 - [ ] **Step 3.6 — Setters** (all 4).
-- [ ] **Step 3.7 — `inputInfor()`**
+- [x] **Step 3.7 — `inputInfor()`**
   - ▸ Do: a) new Scanner; b) prompt+read `memberID`; c) `nameMember`; d) `phoneNumber`; e) `email`. All `nextLine()` (no ints → no newline trap).
-- [ ] **Step 3.8 — `static showHeader()`** — separator line + titles: MemberID, Name, Phone, Email.
-- [ ] **Step 3.9 — `showInfor()`** — one aligned row, same widths.
+- [x] **Step 3.8 — `static showHeader()`** — separator line + titles: MemberID, Name, Phone, Email.
+- [x] **Step 3.9 — `showInfor()`** — one aligned row, same widths.
 - [ ] **✅ Module 3 done when:** a one-member table prints; and you can answer _"why no polymorphism for Member but yes for book?"_ (one member kind vs. four book kinds).
 
 ---
