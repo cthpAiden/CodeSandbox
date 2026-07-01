@@ -264,13 +264,13 @@ Every entity prints as a table with a **separator line** + a **format string**. 
 - [x] **Step 3.2 — 4 private fields:** a) `memberID` b) `nameMember` c) `email` d) `phoneNumber` (all String).
 - [x] **Step 3.3 — No-arg constructor.**
 - [x] **Step 3.4 — Full constructor** (4 params, `this.x = x`).
-- [ ] **Step 3.5 — Getters** (all 4).
-- [ ] **Step 3.6 — Setters** (all 4).
+- [x] **Step 3.5 — Getters** (all 4).
+- [x] **Step 3.6 — Setters** (all 4).
 - [x] **Step 3.7 — `inputInfor()`**
   - ▸ Do: a) new Scanner; b) prompt+read `memberID`; c) `nameMember`; d) `phoneNumber`; e) `email`. All `nextLine()` (no ints → no newline trap).
 - [x] **Step 3.8 — `static showHeader()`** — separator line + titles: MemberID, Name, Phone, Email.
 - [x] **Step 3.9 — `showInfor()`** — one aligned row, same widths.
-- [ ] **✅ Module 3 done when:** a one-member table prints; and you can answer _"why no polymorphism for Member but yes for book?"_ (one member kind vs. four book kinds).
+- [x] **✅ Module 3 done when:** a one-member table prints; and you can answer _"why no polymorphism for Member but yes for book?"_ (one member kind vs. four book kinds).
 
 ---
 
@@ -792,7 +792,7 @@ Be able to answer these out loud:
 
 - [x] Module 1 — `Book` (Steps 1.1–1.14)
 - [x] Module 2 — subclasses (Steps 2.1–2.10)
-- [ ] Module 3 — `Member` (Steps 3.1–3.9)
+- [x] Module 3 — `Member` (Steps 3.1–3.9)
 - [ ] Module 4 — `Borrowing` (Steps 4.1–4.11)
 - [ ] Module 5 — skeleton + helpers (Steps 5.1–5.17)
 - [ ] Module 6 — Book management (Steps 6.1–6.11)

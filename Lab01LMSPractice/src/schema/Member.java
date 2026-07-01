@@ -1,10 +1,9 @@
-
 package schema;
 
 import java.util.Scanner;
 
-
 public class Member {
+
     private String memberID;
     private String memberName;
     private String email;
@@ -42,8 +41,7 @@ public class Member {
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
-    
-    
+
     public Member() {
     }
 
@@ -53,7 +51,7 @@ public class Member {
         this.email = email;
         this.phoneNumber = phoneNumber;
     }
-    
+
     public void inputInfor() {
         System.out.print("Enter member ID: ");
         memberID = sc.nextLine();
@@ -64,15 +62,15 @@ public class Member {
         System.out.print("Enter phone number: ");
         phoneNumber = sc.nextLine();
     }
-    
+
     public static void showHeader() {
         System.out.println("-------------------------------");
-        System.out.printf("|%-10s|%-30s|%-20s|%-15s|%n", 
+        System.out.printf("|%-10s|%-30s|%-20s|%-15s|%n",
                 "ID", "Name", "Email", "Phone No.");
     }
-    
+
     public void showInfor() {
-        System.out.printf("|%-10s|%-30s|%-20s|%-15s|%n", 
+        System.out.printf("|%-10s|%-30s|%-20s|%-15s|%n",
                 memberID, memberName, email, phoneNumber);
     }
 }
